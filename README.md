@@ -2,6 +2,16 @@ This is a [Next.js](https://nextjs.org) project bootstrapped with [`create-next-
 
 ## Getting Started
 
+<!-- ADD QUERY TABLE -->
+
+create table students (
+id uuid primary key default gen_random_uuid(),
+nis varchar(20) not null,
+nama varchar(100) not null,
+kelas varchar(20) not null,
+created_at timestamp with time zone default now()
+);
+
 First, run the development server:
 
 ```bash
