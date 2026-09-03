@@ -66,6 +66,8 @@ export default function Home() {
             <h1 className="text-3xl font-bold">Data Siswa</h1>
 
             <p className="mt-1 text-gray-600">Test Deploy Netlify or Vercel</p>
+
+            <p className="mt-1 text-gray-600">Try to test it</p>
           </div>
 
           <Link
