@@ -18,7 +18,7 @@ export default function TambahSiswa() {
   async function handleSubmit(e: FormEvent) {
     e.preventDefault();
 
-    if (!nis || !nama || !kelas) {
+    if (!nis || !nama || !kelas || !absen) {
       alert("Semua data harus diisi");
       return;
     }
@@ -99,10 +99,10 @@ export default function TambahSiswa() {
             <div>
               <label className="mb-2 block font-medium">Absen</label>
 
-            <input
+              <input
                 type="text"
                 value={absen}
-                onChange={(e) => setNama(e.target.value)}
+                onChange={(e) => setAbsen(e.target.value)}
                 className="w-full rounded-lg border p-3 outline-none focus:ring-2 focus:ring-blue-500"
                 placeholder="Masukkan absen siswa"
               />

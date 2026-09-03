@@ -54,7 +54,7 @@ export default function EditSiswa() {
     setNis(data.nis);
     setNama(data.nama);
     setKelas(data.kelas);
-    setKelas(data.absen);
+    setAbsen(data.absen);
 
     setLoading(false);
   }
@@ -62,7 +62,7 @@ export default function EditSiswa() {
   async function handleSubmit(e: FormEvent) {
     e.preventDefault();
 
-    if (!nis || !nama || !kelas) {
+    if (!nis || !nama || !kelas || !absen) {
       alert("Semua data harus diisi");
       return;
     }
@@ -183,14 +183,14 @@ export default function EditSiswa() {
               />
             </div>
             <div>
-            <label className="mb-2 block font-medium text-gray-700">
+              <label className="mb-2 block font-medium text-gray-700">
                 Absen
               </label>
 
               <input
                 type="text"
                 value={absen}
-                onChange={(e) => setNis(e.target.value)}
+                onChange={(e) => setAbsen(e.target.value)}
                 className="w-full rounded-lg border border-gray-300 bg-white p-3 text-gray-900 outline-none focus:border-blue-500 focus:ring-2 focus:ring-blue-200"
                 placeholder="Masukkan Absen"
               />
